@@ -7,7 +7,7 @@ $input = json_decode(file_get_contents('php://input'), true);
 if (isset($input['id'])) {
     $id = $input['id'];
 
-    $stmt = $conn->prepare("DELETE FROM tarefas WHERE id_terefas = ?");
+    $stmt = $conn->prepare("DELETE FROM tarefas WHERE id_tarefas = ?");
     $stmt->bind_param("i", $id);
 
     if ($stmt->execute()) {

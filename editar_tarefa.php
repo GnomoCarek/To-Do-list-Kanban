@@ -14,7 +14,7 @@ if (isset($input['id']) && isset($input['descricao'])) {
         exit();
     }
 
-    $stmt = $conn->prepare("UPDATE tarefas SET descricao_tarefa = ? WHERE id_terefas = ?");
+    $stmt = $conn->prepare("UPDATE tarefas SET descricao_tarefa = ? WHERE id_tarefas = ?");
     $stmt->bind_param("si", $descricao, $id);
 
     if ($stmt->execute()) {
